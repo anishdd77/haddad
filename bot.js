@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 var config = {
   events: [
-    {type: "CHANNEL_CREATE", logType: "CHANNEL_CREATE", limit: 20 , delay: 5000},
+    {type: "CHANNEL_CREATE", logType: "CHANNEL_CREATE", limit: 4 , delay: 5000},
     {type: "CHANNEL_DELETE", logType: "CHANNEL_DELETE", limit: 4, delay: 5000},
     {type: "GUILD_MEMBER_REMOVE", logType: "MEMBER_KICK", limit: 4, delay: 5000},
     {type: "GUILD_BAN_ADD", logType: "MEMBER_BAN_ADD", limit: 2, delay: 5000},
