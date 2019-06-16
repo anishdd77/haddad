@@ -642,6 +642,4 @@ const w = ['./img/up1.png','./img/up2.png','./img/up.png'];
 }
 
 
-
-
-client.login(process.env.BOT_TOKEN);
+client.login('NTgwODI5NzQxNDk4NjMwMTky.XQdpmA.jut0ejtWX1YlJMxjdFGCd1CLKDg');
