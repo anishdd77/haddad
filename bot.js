@@ -23,6 +23,27 @@ client.on('ready', function(){
     }, ms);0
 });
 
+client.on("message", async message => {
+    if(message.content.startsWith(prefix + "help")) {
+        let help = new Discord.RichEmbed()
+            .setColor("RANDOM")
+            .setThumbnail(message.author.avatarURL)
+            .setDescription(`***بوت نكت __${message.guild.name}__***
+			============
+			**  اوامر تكت **
+			------
+			-new   → لفتح تكت 
+			-close  → لغلق تكت
+			============
+			اوامر الادارة 
+			------
+			⇏ -mtickets enable/disable → لتعطيل وتفعيل تكت
+			⇏ cleartickets →  لمسح جميع تكتات
+			
+			||ANIS_hdd ©||`);
+            message.channel.sendEmbed(help);
+    }
+});
 
 client.on('ready',async () => console.log(`   - " ${client.user.username} " , Tickety is ready to work.`));
 client.on('message',async message => {
@@ -110,20 +131,6 @@ client.on('message',async message => {
 			}
 		}
 	}
-});
-client.on("message", async message => {
-    if(message.content.startsWith(prefix + "help")) {
-        let help = new Discord.RichEmbed()
-            .setColor("RANDOM")
-            .setThumbnail(message.author.avatarURL)
-			 -new                     → لفتح تكت`)
-             -close                   → لغلق تكت`)
-             -mtickets enable/disable → لتعطيل وتفعيل تكت `)
-			  cleartickets             →  لمسح جميع تكتات`)
-			
-			|ANIS_hdd ©|`);
-            message.channel.sendEmbed(help);
-    }
 });
 
 client.login(process.env.BOT_TOKEN);
