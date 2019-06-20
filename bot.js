@@ -122,10 +122,8 @@ client.on("message", async message => {
             ⇏ -close                   → لغلق تكت`)
            `⇏ -mtickets enable/disable → لتعطيل وتفعيل تكت `)
 			⇏ cleartickets             →  لمسح جميع تكتات`)
-          
-            await message.channel.send(`:white_check_mark: , **هذه قائمة بجميع اوامر البووت.**`);
 			
-			||ANIS_hdd ©||`);
+			|ANIS_hdd ©|`);
             message.channel.sendEmbed(help);
     }
 });
