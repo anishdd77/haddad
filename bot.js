@@ -3,9 +3,6 @@ const client     = new Discord.Client();
 const prefix   = "-";
 const category = "category-id";
 const devs     = ["484326398568300555", "test"];
-let mtickets   = true;
-let tchannels  = [];
-let current    = 0;
 const replyForMention = [   "**Hi For More Informations Type ||-*-new (تكت)*-||♥**",  ]
 client.on('message', message=> {
     if (message.author.bot) return;
@@ -14,6 +11,9 @@ client.on('message', message=> {
     message.reply(replyForMention);
     }
 });
+let mtickets   = true;
+let tchannels  = [];
+let current    = 0;
 
 
 client.on('ready',async () => console.log(`   - " ${client.user.username} " , Tickety is ready to work.`));
