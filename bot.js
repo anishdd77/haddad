@@ -7,8 +7,8 @@ let mtickets   = true;
 let tchannels  = [];
 let current    = 0;
 client.on('ready', function(){
-    var ms = 100000 ;
-    var setGame = [`[ #help ]`];   
+    var ms = 100 ;
+    var setGame = [`[ -new (تكت) ]`];   
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -20,7 +20,7 @@ client.on('ready', function(){
         }
         i = i+j;
         client.user.setGame(setGame[i],`http://www.twitch.tv/KiNg66S`);
-    }, ms);100000
+    }, ms);100
 
 });
 
