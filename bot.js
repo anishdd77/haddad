@@ -6,7 +6,7 @@ const devs     = ["484326398568300555", "test"];
 let mtickets   = true;
 let tchannels  = [];
 let current    = 0;
-const replyForMention = [   "**Hi For More Informations Type ||-*#help*-||♥**",  ]
+const replyForMention = [   "**Hi For More Informations Type ||-*-new (تكت)*-||♥**",  ]
 client.on('message', message=> {
     if (message.author.bot) return;
     if (message.isMentioned(client.user))
