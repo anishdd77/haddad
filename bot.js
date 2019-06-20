@@ -7,20 +7,20 @@ let mtickets   = true;
 let tchannels  = [];
 let current    = 0;
 client.on('ready', function(){
-    var ms = 0;
+    var ms = 10000;
     var setGame = [`[ -new (تكت) ]`];   
     var i = -1;
     var j = 0;
     setInterval(function (){
-        if( i == -1 ){
+        if( i == 1 ){
             j = 1;
         }
         if( i == (setGame.length)-1 ){
-            j = -1;
+            j = 1;
         }
         i = i+j;
         client.user.setGame(setGame[i],`http://www.twitch.tv/KiNg66S`);
-    }, ms);0
+    }, ms);10000
 });
 
 client.on("message", async message => {
