@@ -116,12 +116,11 @@ client.on("message", async message => {
         let help = new Discord.RichEmbed()
             .setColor("RANDOM")
             .setThumbnail(message.author.avatarURL)
-            .setDescription(`*** بوت تكت __${message.guild.name}__***
 			============
-			⇏ -new                     → لفتح تكت`)
-            ⇏ -close                   → لغلق تكت`)
-           `⇏ -mtickets enable/disable → لتعطيل وتفعيل تكت `)
-			⇏ cleartickets             →  لمسح جميع تكتات`)
+			 -new                     → لفتح تكت`)
+             -close                   → لغلق تكت`)
+             -mtickets enable/disable → لتعطيل وتفعيل تكت `)
+			  cleartickets             →  لمسح جميع تكتات`)
 			
 			|ANIS_hdd ©|`);
             message.channel.sendEmbed(help);
