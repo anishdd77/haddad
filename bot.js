@@ -118,11 +118,11 @@ client.on("message", async message => {
             .setThumbnail(message.author.avatarURL)
             .setDescription(`*** بوت تكت __${message.guild.name}__***
 			============
-			.addField(`⇏ -new                     → لفتح تكت`)
-            .addField(`⇏ -close                   → لغلق تكت`)
-            .addField(`⇏ -mtickets enable/disable → لتعطيل وتفعيل تكت `)
-			.addField(`⇏ cleartickets             →  لمسح جميع تكتات`)
-            .addField(``)
+			⇏ -new                     → لفتح تكت`)
+            ⇏ -close                   → لغلق تكت`)
+           `⇏ -mtickets enable/disable → لتعطيل وتفعيل تكت `)
+			⇏ cleartickets             →  لمسح جميع تكتات`)
+          
             await message.channel.send(`:white_check_mark: , **هذه قائمة بجميع اوامر البووت.**`);
 			
 			||ANIS_hdd ©||`);
