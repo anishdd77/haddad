@@ -40,7 +40,7 @@ client.on("message", async message => {
 			⇏ -mtickets enable/disable → لتعطيل وتفعيل تكت
 			⇏ cleartickets →  لمسح جميع تكتات
 			
-			||ANIS_hdd ©||`);
+			||server ©||`);
             message.channel.sendEmbed(help);
     }
 });
