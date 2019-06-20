@@ -116,7 +116,6 @@ client.on("message", async message => {
         let help = new Discord.RichEmbed()
             .setColor("RANDOM")
             .setThumbnail(message.author.avatarURL)
-			============
 			 -new                     → لفتح تكت`)
              -close                   → لغلق تكت`)
              -mtickets enable/disable → لتعطيل وتفعيل تكت `)
