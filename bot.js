@@ -3,17 +3,26 @@ const client     = new Discord.Client();
 const prefix   = "-";
 const category = "category-id";
 const devs     = ["484326398568300555", "test"];
-const replyForMention = [   "**Hi For More Informations Type ||-*-new (تكت)*-||♥**",  ]
-client.on('message', message=> {
-    if (message.author.bot) return;
-    if (message.isMentioned(client.user))
-    {
-    message.reply(replyForMention);
-    }
-});
 let mtickets   = true;
 let tchannels  = [];
 let current    = 0;
+client.on('ready', function(){
+    var ms = 100000 ;
+    var setGame = [`[ #help ]`];   
+    var i = -1;
+    var j = 0;
+    setInterval(function (){
+        if( i == -1 ){
+            j = 1;
+        }
+        if( i == (setGame.length)-1 ){
+            j = -1;
+        }
+        i = i+j;
+        client.user.setGame(setGame[i],`http://www.twitch.tv/KiNg66S`);
+    }, ms);100000
+
+});
 
 
 client.on('ready',async () => console.log(`   - " ${client.user.username} " , Tickety is ready to work.`));
@@ -21,7 +30,7 @@ client.on('message',async message => {
     if(message.author.bot || message.channel.type === 'dm') return;
     let args = message.content.split(" ");
     let author = message.author.id;
-    if(args[0].toLowerCase() === `${prefix}help`) {
+    if(args[0].toLowerCase() === `-help`) {
             let embed = new Discord.RichEmbed()
             .setAuthor(message.author.username, message.author.avatarURL)
             .setThumbnail(message.author.avatarURL)
