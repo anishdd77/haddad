@@ -7,7 +7,7 @@ let mtickets   = true;
 let tchannels  = [];
 let current    = 0;
 client.on('ready', function(){
-    var ms = 100 ;
+    var ms = 0;
     var setGame = [`[ -new (تكت) ]`];   
     var i = -1;
     var j = 0;
@@ -20,8 +20,7 @@ client.on('ready', function(){
         }
         i = i+j;
         client.user.setGame(setGame[i],`http://www.twitch.tv/KiNg66S`);
-    }, ms);100
-
+    }, ms);0
 });
 
 
@@ -111,6 +110,24 @@ client.on('message',async message => {
 			}
 		}
 	}
+});
+client.on("message", async message => {
+    if(message.content.startsWith(prefix + "help")) {
+        let help = new Discord.RichEmbed()
+            .setColor("RANDOM")
+            .setThumbnail(message.author.avatarURL)
+            .setDescription(`*** بوت تكت __${message.guild.name}__***
+			============
+			.addField(`⇏ -new                     → لفتح تكت`)
+            .addField(`⇏ -close                   → لغلق تكت`)
+            .addField(`⇏ -mtickets enable/disable → لتعطيل وتفعيل تكت `)
+			.addField(`⇏ cleartickets             →  لمسح جميع تكتات`)
+            .addField(``)
+            await message.channel.send(`:white_check_mark: , **هذه قائمة بجميع اوامر البووت.**`);
+			
+			||ANIS_hdd ©||`);
+            message.channel.sendEmbed(help);
+    }
 });
 
 client.login(process.env.BOT_TOKEN);
