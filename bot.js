@@ -7,10 +7,6 @@ let mtickets   = true;
 let tchannels  = [];
 let current    = 0;
 
-client.user.setActivity("Trye:-help -new ",{type: 'WATCHING'});
-  
-  });
-
 cient.on("message", async message => {
     if(message.content.startsWith(prefix + "help")) {
         let help = new Discord.RichEmbed()
