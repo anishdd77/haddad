@@ -6,7 +6,6 @@ const devs     = ["484326398568300555", "test"];
 let mtickets   = true;
 let tchannels  = [];
 let current    = 0;
-
 cient.on("message", async message => {
     if(message.content.startsWith(prefix + "help")) {
         let help = new Discord.RichEmbed()
