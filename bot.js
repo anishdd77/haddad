@@ -6,24 +6,17 @@ const devs     = ["484326398568300555", "test"];
 let mtickets   = true;
 let tchannels  = [];
 let current    = 0;
-client.on('ready', function(){
-    var ms = 10000;
-    var setGame = [`[ -new (تكت) ]`];   
-    var i = -1;
-    var j = 0;
-    setInterval(function (){
-        if( i == 1 ){
-            j = 1;
-        }
-        if( i == (setGame.length)-1 ){
-            j = 1;
-        }
-        i = i+j;
-        client.user.setGame(setGame[i],`http://www.twitch.tv/KiNg66S`);
-    }, ms);10000
+
+const replyForMention = [   "**Hi For More Informations Type ||-*#help*-||♥**",  ]
+client.on('message', message=> {
+    if (message.author.bot) return;
+    if (message.isMentioned(client.user))
+    {
+    message.reply(replyForMention);
+    }
 });
 
-client.on("message", async message => {
+cient.on("message", async message => {
     if(message.content.startsWith(prefix + "help")) {
         let help = new Discord.RichEmbed()
             .setColor("RANDOM")
