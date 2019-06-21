@@ -6,9 +6,8 @@ const devs     = ["484326398568300555", "test"];
 let mtickets   = true;
 let tchannels  = [];
 let current    = 0;
-client.on('ready', () => {
-    console.log(`Logged in as ${client.user.tag} !`);
-          client.user.setActivity("Trye:-help -new ",{type: 'WATCHING'});
+
+client.user.setActivity("Trye:-help -new ",{type: 'WATCHING'});
   
   });
 
