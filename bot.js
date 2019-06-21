@@ -6,15 +6,11 @@ const devs     = ["484326398568300555", "test"];
 let mtickets   = true;
 let tchannels  = [];
 let current    = 0;
-
-const replyForMention = [   "**Hi For More Informations Type ||-*#help*-||♥**",  ]
-client.on('message', message=> {
-    if (message.author.bot) return;
-    if (message.isMentioned(client.user))
-    {
-    message.reply(replyForMention);
-    }
-});
+client.on('ready', () => {
+    console.log(`Logged in as ${client.user.tag} !`);
+          client.user.setActivity("Trye:-help -new ",{type: 'WATCHING'});
+  
+  });
 
 cient.on("message", async message => {
     if(message.content.startsWith(prefix + "help")) {
